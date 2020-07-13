@@ -28,6 +28,7 @@ public class ViewProject extends javax.swing.JFrame {
     }
     
     void setField(Project prjct){
+        pro=prjct;
         txtID.setText(prjct.getProjectID());
         txtName.setText(prjct.getProjectName());
         txtstartdate.setText(prjct.getStartedDate());
@@ -382,6 +383,7 @@ public class ViewProject extends javax.swing.JFrame {
         prj.setDemandedTotalValue(txtdemandtotalvalue.getText());  
         prj.setBankName(txtbankname.getText());
         prj.setBankBondHandlingFee(txtbondhandlingfee.getText());
+        prj.setRetaindedMoney(txtretainedmoney.getText());
         prj.setDueDateReleasingRetainedMoney(txtduedateretainmoney.getText());
         prj.setDueDateOfFinishingDate(txtfinishingdate.getText());
           

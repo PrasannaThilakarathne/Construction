@@ -42,7 +42,7 @@ public class ProjectDetail extends AbstractTableModel{
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch(columnIndex){
         case 0:return plist.get(rowIndex).getProjectID();
-        case 1:return  plist.get(rowIndex).getProjectName();
+        case 1:return plist.get(rowIndex).getProjectName();
         case 2:return plist.get(rowIndex).getStartedDate();
         case 3:return plist.get(rowIndex).getProjectValue();
         case 4:return plist.get(rowIndex).getReductionPercentage();

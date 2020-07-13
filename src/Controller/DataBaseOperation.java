@@ -101,7 +101,7 @@ public class DataBaseOperation {
         try {
             connection = (Connection) DriverManager.getConnection(url, username, password);
             String qury;
-            qury ="DELETE FROM projects WHERE ProjectID ="+pr.getProjectID();
+            qury ="DELETE FROM projects WHERE ProjectID ='"+pr.getProjectID()+"'";
             pst = (PreparedStatement) connection.prepareStatement(qury);
             pst.executeUpdate();
             return true;
@@ -109,23 +109,6 @@ public class DataBaseOperation {
             System.out.println("Exception "+e);
             return false;
         }
-    }
-    
-     public boolean deleteStudent(Project em)
-    {
-        try{
-               connection = (Connection)(java.sql.Connection)DriverManager.getConnection(url, username, password);
-               String query;
-               //String var = em.getProjectID();
-               int var = Integer.parseInt(em.getProjectID());
-            query = "DELETE FROM projects WHERE ProjectID =" +var;
-               pst =(PreparedStatement)(java.sql.PreparedStatement)connection.prepareStatement(query);
-            
-                pst.executeUpdate();
-               return true;
-               
-        }catch(SQLException e){System.out.println(e); return false;}
-        
     }
 }
 
